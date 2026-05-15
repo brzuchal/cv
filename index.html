@@ -1,0 +1,518 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Michał Brzuchalski — Senior PHP Backend & Platform Engineer · Symfony · Kubernetes</title>
+  <style>
+    :root {
+      --text: #1f2933;
+      --muted: #5f6b7a;
+      --line: #d8dee6;
+      --accent: #1f6feb;
+      --accent-soft: #eef5ff;
+      --bg: #ffffff;
+      --sidebar-bg: #f7f9fc;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      font-size: 13px;
+    }
+
+    body {
+      margin: 0;
+      background: #eef1f5;
+      color: var(--text);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.38;
+    }
+
+    .page {
+      width: 210mm;
+      min-height: 594mm;
+      margin: 18px auto;
+      background: var(--bg);
+      box-shadow: 0 8px 30px rgba(20, 30, 45, 0.14);
+      display: grid;
+      grid-template-columns: 1fr 68mm;
+      align-items: start;
+    }
+
+    main {
+      padding: 18mm 9mm 14mm 14mm;
+    }
+
+    aside {
+      padding: 18mm 9mm 14mm 9mm;
+      background: var(--sidebar-bg);
+      border-left: 1px solid var(--line);
+    }
+
+    h1,
+    h2,
+    h3,
+    p,
+    ul {
+      margin-top: 0;
+    }
+
+    h1 {
+      margin-bottom: 4px;
+      font-size: 2rem;
+      line-height: 1.08;
+      letter-spacing: -0.03em;
+    }
+
+    .headline {
+      margin-bottom: 10px;
+      color: var(--muted);
+      font-size: 1.02rem;
+      font-weight: 700;
+    }
+
+    .location {
+      margin-bottom: 14px;
+      color: var(--muted);
+    }
+
+    .intro {
+      margin-bottom: 16px;
+      font-size: 1.02rem;
+    }
+
+    h2 {
+      margin: 18px 0 8px;
+      padding-bottom: 4px;
+      border-bottom: 1px solid var(--line);
+      color: var(--accent);
+      font-size: 0.9rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      break-after: avoid;
+    }
+
+    h3 {
+      margin-bottom: 2px;
+      font-size: 1.02rem;
+      break-after: avoid;
+    }
+
+    .role {
+      margin-bottom: 11px;
+      break-inside: avoid;
+    }
+
+    aside section {
+      break-inside: avoid;
+    }
+
+    .role-meta {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 4px;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .company {
+      font-weight: 700;
+    }
+
+    ul {
+      margin-bottom: 0;
+      padding-left: 17px;
+    }
+
+    li {
+      margin-bottom: 3px;
+    }
+
+    aside h2 {
+      margin-top: 15px;
+    }
+
+    aside h2:first-child {
+      margin-top: 0;
+    }
+
+    .contact-list,
+    .tag-list,
+    .plain-list {
+      padding-left: 0;
+      list-style: none;
+    }
+
+    .contact-list li,
+    .plain-list li {
+      margin-bottom: 6px;
+    }
+
+    .tag-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+      margin-bottom: 0;
+    }
+
+    .tag-list li {
+      margin: 0;
+      font-size: 0.83rem;
+      color: var(--text);
+      white-space: nowrap;
+    }
+
+    .tag-list li::after {
+      content: ",";
+      color: var(--muted);
+      margin-right: 2px;
+    }
+
+    .tag-list li:last-child::after {
+      content: "";
+    }
+
+    .skill-group {
+      margin-bottom: 10px;
+    }
+
+    .skill-group strong {
+      display: block;
+      margin-bottom: 4px;
+      font-size: 0.84rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .note {
+      color: var(--muted);
+      font-size: 0.84rem;
+    }
+
+    @page {
+      size: A4;
+      margin: 12mm 0;
+    }
+
+    @media print {
+      body {
+        background: white;
+      }
+
+      .page {
+        width: 210mm;
+        min-height: auto;
+        margin: 0;
+        box-shadow: none;
+      }
+
+      main {
+        padding-top: 6mm;
+        padding-bottom: 6mm;
+      }
+
+      aside {
+        padding-top: 6mm;
+        padding-bottom: 6mm;
+        background: var(--sidebar-bg) !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+    }
+  </style>
+</head>
+<body>
+  <article class="page">
+    <main>
+      <header>
+        <h1>Michał Marcin Brzuchalski</h1>
+        <p class="headline">Technical Lead · PHP Backend & Platform Engineering · Integrations · Kubernetes</p>
+        <p class="location">Gdynia, Pomorskie, Poland</p>
+        <p class="intro">
+          Senior PHP backend and platform engineer with nearly 20 years of commercial experience. Currently
+          Technical Lead at EASI'R, building microservice backends, event-driven integrations, and managing
+          Kubernetes-based delivery for an automotive dealer CRM platform.
+        </p>
+      </header>
+
+      <section>
+        <h2>What I'm looking for</h2>
+        <p>
+          Looking for backend, integration, or platform-adjacent engineering roles where I can contribute across
+          the full delivery stack — from PHP services and APIs to Kubernetes workloads and CI/CD automation.
+          Prefer product-oriented teams, remote setup, and environments where code quality and operational
+          reliability actually matter.
+        </p>
+      </section>
+
+      <section>
+        <h2>Experience</h2>
+
+        <div class="role">
+          <h3>Technical Lead</h3>
+          <div class="role-meta">
+            <span><span class="company">EASI'R</span> · Århus Area, Denmark</span>
+            <span>Jun 2022 — Present</span>
+          </div>
+          <ul>
+            <li>Leads technical direction and engineering operations on EASI'R CRM — an automotive dealer platform serving the Danish market.</li>
+            <li>Designed and implemented OAuth2/OIDC SSO for the platform — as a Symfony Security component and as a standalone OAuth2 provider in Laravel.</li>
+            <li>Architected multi-transport event-driven messaging (Apache Kafka, RabbitMQ/AMQP, Amazon SQS); authored a custom Symfony Messenger transport for SQS+S3 large message handling.</li>
+            <li>Developed a PHP-based Kubernetes manifest generator replacing Helm chart generation in the delivery pipeline, integrated with Flux-based GitOps and Istio service mesh.</li>
+            <li>Drives production reliability through log-based diagnostics, runtime investigation, and troubleshooting of complex integration issues.</li>
+            <li>Mentors engineering teams on backend practices, containerization, and cloud-native delivery.</li>
+          </ul>
+        </div>
+
+        <div class="role">
+          <h3>Senior Software Engineer</h3>
+          <div class="role-meta">
+            <span><span class="company">EASI'R</span> · Århus Area, Denmark</span>
+            <span>Mar 2018 — Jun 2022</span>
+          </div>
+          <ul>
+            <li>Authored DataDump — an ETL/data warehouse service synchronizing dealer data across the platform via RabbitMQ/AMQP with SSL/TLS support and S3 storage.</li>
+            <li>Built and maintained a core PHP integration library (Symfony and Laravel native) — domain models, serialization, Kafka support, upgraded through Symfony 5/6/7/8 and successive PHP versions.</li>
+            <li>Developed a suite of integration microservices connecting the platform with external systems: lead intake and tracking for third-party partners, aftersales workflows, dealer vehicle configuration and stock, customer and vehicle data synchronization, and manufacturing and ordering tracking — event-driven via Kafka, AMQP, and Amazon SQS.</li>
+            <li>Contributed to CI/CD pipelines, containerized delivery, and GitHub Actions automation.</li>
+          </ul>
+        </div>
+
+        <div class="role">
+          <h3>Senior Software Engineer</h3>
+          <div class="role-meta">
+            <span><span class="company">Ciklum</span> · Gdańsk, Poland</span>
+            <span>Mar 2018 — Sep 2021</span>
+          </div>
+          <p class="note">Staffing arrangement — worked embedded at EASI'R as Senior Software Engineer (see above).</p>
+        </div>
+
+        <div class="role">
+          <h3>Enterprise Architect</h3>
+          <div class="role-meta">
+            <span><span class="company">LPP S.A.</span> · Gdańsk, Poland</span>
+            <span>Sep 2017 — Feb 2018</span>
+          </div>
+          <ul>
+            <li>Improved software architecture of e-commerce applications built with proprietary frameworks, Magento, and Symfony.</li>
+            <li>Worked closely with architecture and DevOps teams on technical direction and delivery improvements.</li>
+          </ul>
+        </div>
+
+        <div class="role">
+          <h3>Senior Software Engineer / Software Architect</h3>
+          <div class="role-meta">
+            <span><span class="company">Madkom S.A.</span> · Gdynia, Poland</span>
+            <span>Apr 2015 — Sep 2017</span>
+          </div>
+          <ul>
+            <li>Worked on PHP, PostgreSQL, deployment automation, CI, and modernization of a large government application.</li>
+            <li>Supported migration from legacy code to Symfony2 and introduced Docker, Composer, OAuth, and build tooling.</li>
+          </ul>
+        </div>
+
+        <div class="role">
+          <h3>Senior Software Engineer</h3>
+          <div class="role-meta">
+            <span><span class="company">Madkom S.A.</span> · Gdynia, Poland</span>
+            <span>Sep 2013 — Mar 2015</span>
+          </div>
+          <ul>
+            <li>Drove backend engineering, build automation, and migration work toward Symfony-based modular applications.</li>
+            <li>Early Docker adopter (c. 2015) — introduced containerized development workflows before Docker reached mainstream adoption.</li>
+          </ul>
+        </div>
+
+        <div class="role">
+          <h3>Software Engineer / Team Lead</h3>
+          <div class="role-meta">
+            <span><span class="company">Wakacje.pl S.A.</span> · Gdańsk Area, Poland</span>
+            <span>Jun 2009 — Nov 2014</span>
+          </div>
+          <ul>
+            <li>Built PHP systems using MySQL, Memcache, and MongoDB across web applications, imports, APIs, and CRM integrations.</li>
+            <li>Improved architecture and deployment processes in a travel-tech environment.</li>
+          </ul>
+        </div>
+
+        <div class="role">
+          <h3>Software Engineer / Team Lead</h3>
+          <div class="role-meta">
+            <span><span class="company">Easygo.pl</span> · Gdańsk Area, Poland</span>
+            <span>Jan 2008 — Jun 2009</span>
+          </div>
+          <ul>
+            <li>Worked as PHP / MySQL / PostgreSQL developer on frontend systems, imports, and CRM-related integrations.</li>
+          </ul>
+        </div>
+
+        <div class="role">
+          <h3>Software Engineer</h3>
+          <div class="role-meta">
+            <span><span class="company">Easygo.pl</span> · Gdańsk Area, Poland</span>
+            <span>Jun 2007 — Dec 2007</span>
+          </div>
+        </div>
+
+        <div class="role">
+          <h3>Software Engineer</h3>
+          <div class="role-meta">
+            <span><span class="company">dwakroki.com</span> · Gdynia Area, Poland</span>
+            <span>2006 — 2007</span>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Public technical work</h2>
+        <p>
+          Maintains public PHP and Symfony-related repositories and experiments around messaging, scheduling, REST
+          clients, and backend tooling. Has a public PHP.net developer profile and active GitHub presence relevant to
+          the PHP ecosystem.
+        </p>
+      </section>
+
+      <section>
+        <h2>Recruitment consent</h2>
+        <p class="note">
+          I consent to the processing of my personal data contained in this CV for the purposes of the current recruitment process.
+          I also consent to the processing of my personal data for the purposes of future recruitment processes.
+        </p>
+      </section>
+    </main>
+
+    <aside>
+      <section>
+        <h2>Contact</h2>
+        <ul class="contact-list">
+          <li><a href="tel:+48502093929">+48 502 093 929</a></li>
+          <li><a href="mailto:michal@brzuchalski.com">michal@brzuchalski.com</a></li>
+          <li><a href="https://linkedin.com/in/brzuchal">linkedin.com/in/brzuchal</a></li>
+          <li><a href="https://github.com/brzuchal">github.com/brzuchal</a></li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Focus</h2>
+        <ul class="tag-list">
+          <li>PHP</li>
+          <li>Symfony</li>
+          <li>Backend</li>
+          <li>Integrations</li>
+          <li>APIs</li>
+          <li>Kubernetes</li>
+          <li>Helm</li>
+          <li>Flux</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Core skills</h2>
+
+        <div class="skill-group">
+          <strong>Backend</strong>
+          <ul class="tag-list">
+            <li>PHP</li>
+            <li>Symfony</li>
+            <li>Laravel</li>
+            <li>REST APIs</li>
+            <li>Microservices</li>
+            <li>DDD</li>
+            <li>TDD</li>
+          </ul>
+        </div>
+
+        <div class="skill-group">
+          <strong>Data &amp; messaging</strong>
+          <ul class="tag-list">
+            <li>PostgreSQL</li>
+            <li>MariaDB</li>
+            <li>MySQL</li>
+            <li>RabbitMQ</li>
+            <li>Kafka</li>
+          </ul>
+        </div>
+
+        <div class="skill-group">
+          <strong>Delivery &amp; operations</strong>
+          <ul class="tag-list">
+            <li>Docker</li>
+            <li>CI/CD</li>
+            <li>AWS</li>
+            <li>Linux</li>
+            <li>Bash</li>
+            <li>Kubernetes</li>
+            <li>Helm Charts</li>
+            <li>Helm templates</li>
+            <li>Flux</li>
+            <li>GitHub Actions</li>
+            <li>Istio VirtualService</li>
+            <li>ConfigMaps</li>
+            <li>Secrets</li>
+            <li>Health checks</li>
+            <li>Readiness/Liveness</li>
+            <li>Kibana</li>
+            <li>Lens</li>
+            <li>CronJobs</li>
+            <li>Jobs</li>
+            <li>Rollbacks</li>
+            <li>CrashLoopBackOff investigation</li>
+          </ul>
+        </div>
+
+        <div class="skill-group">
+          <strong>Private / additional exposure</strong>
+          <ul class="tag-list">
+            <li>Event Sourcing</li>
+            <li>Terraform</li>
+            <li>Tanka</li>
+            <li>Jsonnet</li>
+            <li>MCP Server</li>
+            <li>Scaleway</li>
+          </ul>
+        </div>
+      </section>
+
+      <section>
+        <h2>What I bring</h2>
+        <ul class="plain-list">
+          <li>Nearly 20 years of commercial PHP experience.</li>
+          <li>Strong fit for backend and integration-heavy projects.</li>
+          <li>Architecture modernization and legacy-to-Symfony migration work.</li>
+          <li>Technical leadership, team mentoring, and delivery oversight in product-oriented environments.</li>
+          <li>Registered PHP internals member with voting rights on language RFCs and an active PHP.net developer profile.</li>
+          <li>Application delivery, CI/CD pipelines, Helm/Kubernetes workload configuration, GitOps workflows (Flux), runtime diagnostics, log-based investigation, and production support.</li>
+          <li>Actively uses AI/LLM tooling (Claude, Codex, Junie, Antigravity) for log analysis, diagnostics, architecture trade-off evaluation, and implementation support.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Education</h2>
+        <ul class="plain-list">
+          <li><strong>Engineer's degree, Information Technology</strong><br>Technical University of Gdańsk<br>2008 — 2013</li>
+          <li><strong>IT Project Management</strong><br>The West Pomeranian Business School in Szczecin<br>2013 — 2014</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Selected training</h2>
+        <ul class="plain-list">
+          <li>Advanced Javascript Training</li>
+          <li>Domain Driven Design — Elements Modeling and Implementation</li>
+          <li>Modern Web Application Architecture — Microservices, REST, noSQL</li>
+          <li>Project Management in Practice</li>
+        </ul>
+      </section>
+    </aside>
+  </article>
+</body>
+</html>
